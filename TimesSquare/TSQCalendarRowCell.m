@@ -51,6 +51,11 @@
     [button setTitleShadowColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
 
+- (void)configureSelectedButton:(UIButton *)button
+{
+
+}
+
 - (void)createDayButtons;
 {
     NSMutableArray *dayButtons = [NSMutableArray arrayWithCapacity:self.daysInWeek];
@@ -108,6 +113,9 @@
     [self.selectedButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
     
     self.selectedButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
+
+    [self configureSelectedButton:self.selectedButton];
+
     self.indexOfSelectedButton = -1;
 }
 

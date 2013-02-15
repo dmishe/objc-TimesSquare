@@ -32,7 +32,7 @@
 @property (nonatomic, weak, readonly) UIImage *selectedBackgroundImage;
 
 /** The background image for a day that's "today".
- 
+
  This is dark gray in the system's built-in Calendar app. You probably want to use a stretchable image.
  */
 @property (nonatomic, weak, readonly) UIImage *todayBackgroundImage;
@@ -65,4 +65,6 @@
  */
 - (void)selectColumnForDate:(NSDate *)date;
 
+
+- (void)configureSelectedButton:(UIButton *)button;
 @end
