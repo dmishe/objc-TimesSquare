@@ -67,4 +67,5 @@
 
 
 - (void)configureSelectedButton:(UIButton *)button;
+- (void)configureTodayButton:(UIButton *)button;
 @end

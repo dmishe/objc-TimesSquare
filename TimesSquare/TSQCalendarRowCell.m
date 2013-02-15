@@ -53,10 +53,13 @@
 
 - (void)configureSelectedButton:(UIButton *)button
 {
-
 }
 
-- (void)createDayButtons;
+- (void)configureTodayButton:(UIButton *)button
+{
+}
+
+- (void)createDayButtons
 {
     NSMutableArray *dayButtons = [NSMutableArray arrayWithCapacity:self.daysInWeek];
     for (NSUInteger index = 0; index < self.daysInWeek; index++) {
@@ -99,6 +102,8 @@
     [self.todayButton setTitleShadowColor:[UIColor colorWithWhite:0.0f alpha:0.75f] forState:UIControlStateNormal];
 
     self.todayButton.titleLabel.shadowOffset = CGSizeMake(0.0f, -1.0f / [UIScreen mainScreen].scale);
+
+    [self configureTodayButton:self.todayButton];
 }
 
 - (void)createSelectedButton;
